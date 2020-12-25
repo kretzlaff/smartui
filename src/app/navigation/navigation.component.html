@@ -7,9 +7,24 @@
     [mode]="(isHandset$ | async) ? 'over' : 'side'"
     [opened]="(isHandset$ | async) === false"
   >
-    <mat-toolbar>Menu</mat-toolbar>
+    <mat-toolbar>SmartUi</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item routerLink="/">Dashboard</a>
+      <a mat-list-item routerLink="/">Home</a>
+      <mat-divider></mat-divider>
+      <h3>Rooms</h3>
+      <a mat-list-item routerLink="/room">All</a>
+      <a mat-list-item routerLink="/room">Bathroom</a>
+      <a mat-list-item routerLink="/room">Bedroom</a>
+      <a mat-list-item routerLink="/room">Kitchen</a>
+      <a mat-list-item routerLink="/room">Living room</a>
+      <mat-divider></mat-divider>
+      <h3>Utilities</h3>
+      <mat-list-item>Bath exhaust</mat-list-item>
+      <mat-list-item>Cleaning</mat-list-item>
+      <mat-list-item>Windows</mat-list-item>
+      <mat-divider></mat-divider>
+      <h3>Settings</h3>
+      <mat-list-item>Appearance</mat-list-item>
       <a mat-list-item routerLink="/settings">Settings</a>
     </mat-nav-list>
   </mat-sidenav>
@@ -24,7 +39,7 @@
       >
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>SmartUi</span>
+      <span>Living room</span>
     </mat-toolbar>
     <!-- Add Content Here -->
     <router-outlet></router-outlet>
